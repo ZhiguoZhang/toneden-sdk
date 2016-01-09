@@ -12,9 +12,9 @@ if(typeof window !== 'undefined') {
 if(env === 'local' || window.location.host === 'publisher.dev' || window.location.host === 'lvho.st') {
     __webpack_public_path__ = '//widget.dev/';
 } else if(env === 'production') {
-    __webpack_public_path__ = '//sd.toneden.io/production/v2/';
+    __webpack_public_path__ = 'dist/';
 } else if(env === 'staging') {
-    __webpack_public_path__ = '//sd.toneden.io/dev/v2/';
+    __webpack_public_path__ = 'dist/';
 }
 
 require.ensure(['../sdk/js/index'], function(ToneDen) {

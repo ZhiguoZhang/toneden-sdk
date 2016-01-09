@@ -139,9 +139,9 @@ module.exports = function(grunt) {
             build: {
                 entry: './loader/index.js',
                 output: {
-                    chunkFilename: 'toneden.js',
+                    chunkFilename: 'dist/toneden.js',
                     crossOriginLoading: 'anonymous',
-                    filename: 'toneden.loader.js',
+                    filename: 'dist/toneden.loader.js',
                     library: 'ToneDenSDK'
                 },
                 module: {
@@ -153,7 +153,7 @@ module.exports = function(grunt) {
                         test: /\.jsx$/
                     }, {
                         loader: 'url-loader?limit=8192',
-                        test: /\.(png|jpg)$/
+                        test: /\.(png|jpg|woff|woff2|eot|ttf|svg)$/
                     }]
                 },
                 plugins: webpackPlugins,
